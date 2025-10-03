@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -x "$(command -v apt-get)" ]; then
-  sudo apt-get install -y tmate openssh-client > /tmp/apt-get.log
+  sudo apt install -y tmate openssh-client
 fi
 
 # Generate ssh key if needed
