@@ -1,8 +1,5 @@
 #!/bin/bash
 
-if [ -x "$(command -v apt-get)" ]; then
-  apt install -y tmate openssh-client
-fi
 
 # Generate ssh key if needed
 [ -e ~/.ssh/id_rsa ] || ssh-keygen -t rsa -f ~/.ssh/id_rsa -q -N ""
