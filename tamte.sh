@@ -1,17 +1,5 @@
 #!/bin/bash
 
-set -e
-
-if [[ ! -z "$SKIP_DEBUGGER" ]]; then
-  echo "Skipping debugger because SKIP_DEBUGGER enviroment variable is set"
-  exit
-fi
-
-# Install tmate on macOS or Ubuntu
-echo Setting up tmate...
-if [ -x "$(command -v brew)" ]; then
-  brew install tmate > /tmp/brew.log
-fi
 if [ -x "$(command -v apt-get)" ]; then
   sudo apt-get install -y tmate openssh-client > /tmp/apt-get.log
 fi
